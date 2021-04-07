@@ -1,0 +1,28 @@
+<div class="container">
+  <!--
+        When u click on the add button the following format will be displayed to provide the details by the user
+    -->
+  <h1>Add Mobile</h1>
+  <form #mobileForm='ngForm' (ngSubmit)='addMobile(mobileForm.value)'>
+    <div class="form-group">
+      <label> Mobile Id</label>&nbsp;&nbsp;
+      <input type="number" name="id" ngModel />
+    </div>
+    <div class="form-group">
+      <label> Mobile Name</label>&nbsp;&nbsp;
+      <input type="text" name="name" ngModel />
+    </div>
+    <div class="form-group">
+      <label> Mobile Price</label>&nbsp;&nbsp;
+      <input type="text" name="price" ngModel />
+    </div>
+    <div class="form-group">
+      <label> Mobile Brands</label>&nbsp;&nbsp;
+      <input type="text" name="brand" ngModel />
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Add Mobile</button>
+  </form>
+
+</div>

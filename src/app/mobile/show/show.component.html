@@ -1,0 +1,29 @@
+<div class="container">
+        <h1>Mobile Details</h1>
+        <table border="1" class="table table-bordered">
+            <thead>
+                <!--
+                    It will display the heading of the components like mobileId,Mobilename,Mobileprice,mobilebrands and actions
+                -->
+          <tr>
+              <th>Mobile ID</th>
+              <th>Mobile Name</th>
+              <th>Mobile Price</th>
+              <th>Mobile Brands</th>
+              <th>Action</th>
+          </tr>
+        </thead>
+        <!--
+            This will display all the added details along with the option delete to delete the added record
+        -->
+        <tbody>
+           <tr *ngFor="let mobile of mobiles,let i=index">
+            <td>{{mobile.id}}</td>
+            <td>{{mobile.name}}</td>
+            <td>{{mobile.price}}</td>
+            <td>{{mobile.brand}}</td>
+             <td><button class="btn btn-danger" (click)='onClick(i)'>Delete</button></td>
+           </tr>
+        </tbody>
+        </table>
+    </div>
